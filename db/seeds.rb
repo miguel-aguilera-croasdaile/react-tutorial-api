@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+currencies = ["EUR", "USD", "LMP", "CLP", "BIT"]
+amounts = [10000,20000,30000,40000]
+fees = [1000,2000,3000,4000,5000]
+
+10.times do
+  w = Withdrawal.new(currency: currencies.sample, amount: amounts.sample, fee: fees.sample)
+  w.save!
+end

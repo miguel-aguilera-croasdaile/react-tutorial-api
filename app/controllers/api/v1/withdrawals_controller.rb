@@ -15,9 +15,9 @@ class Api::V1::WithdrawalsController < ActionController::Base
     @withdrawal.user = current_user
 
     if @withdrawal.save!
-      render status: 200
+      render :json => {:status => 200}
     else
-      render status: 201
+      raise
     end
   end
 

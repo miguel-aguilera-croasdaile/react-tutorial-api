@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= @withdrawals.each do |w| %>
+<p><%= w.amount %></p>
+<p><%= w.fee %></p>
+<p><%= w.currency %></p>
+<p><%= w.created_at %></p>
+<% end %>

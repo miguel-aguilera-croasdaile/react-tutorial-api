@@ -6,3 +6,5 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get]
   end
 end
+
+Rails.application.config.hosts << "http://localhost:3000/create"

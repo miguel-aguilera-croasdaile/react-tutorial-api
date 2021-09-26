@@ -11,6 +11,7 @@ class Api::V1::WithdrawalsController < ActionController::Base
   end
 
   def create
+    headers['Access-Control-Allow-Origin'] = '*'
     @withdrawal = Withdrawal.create(withdrawal_params)
     @withdrawal.user = current_user
 
